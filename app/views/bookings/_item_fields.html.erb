@@ -1,0 +1,15 @@
+<div class='nested-fields'>
+  <p>
+    <%= f.label :item_name %><br>
+    <%= f.text_field :item_name %>
+  </p>
+  <div class="form-outline mb-4">
+    <%= f.label :item_size %><br>
+    <%= f.select :item_size, ['Select', 'Small', 'Medium', 'Large'], class: "form-control" %><br />
+  </div>
+  <p>
+    <%= f.label :item_weight %><br>
+    <%= f.text_field :item_weight %>
+  </p>
+  <p class="btn btn-warning"><%= link_to_remove_association "Remove item", f %></p>
+</div>

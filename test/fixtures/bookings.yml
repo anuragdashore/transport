@@ -1,0 +1,21 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  pickup_address: MyString
+  pickup_city: MyString
+  pickup_state: MyString
+  pickup_timing: MyString
+  deliver_address: MyString
+  deliver_city: MyString
+  deliver_state: MyString
+  user: one
+
+two:
+  pickup_address: MyString
+  pickup_city: MyString
+  pickup_state: MyString
+  pickup_timing: MyString
+  deliver_address: MyString
+  deliver_city: MyString
+  deliver_state: MyString
+  user: two

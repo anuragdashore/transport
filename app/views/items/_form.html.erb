@@ -1,0 +1,17 @@
+<%= simple_form_for [ @booking, @booking.items.build ] do |form| %>
+  <p>
+    <%= form.label :item_name %><br>
+    <%= form.text_field :item_name %>
+  </p>
+  <p>
+    <%= form.label :item_weight %><br>
+    <%= form.text_field :item_weight %>
+  </p>
+  <p>
+    <%= form.label :item_size %><br>
+    <%= form.text_field :item_size %>
+  </p>
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>
