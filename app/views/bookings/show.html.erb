@@ -30,7 +30,6 @@
 </div>
 
 <% if current_user.has_role? :manager %>
-  <%= link_to "Your Bookings", bookings_path(user_id: user_id), class: "btn btn-primary me-3" %>
 <% end %>
 
 <h1>Items</h1>
@@ -41,7 +40,6 @@
 		<%= link_to_unless @booking.status.eql?(status.to_s), status, change_status_booking_path(@booking, status: status), method: :patch, class: "btn btn-primary" %>
 	<% end %>
 </td>
-
-<%#= link_to "Add more items", new_booking_item_path(@booking), class: "btn btn-primary" %>
-<h1>Add Your Items Here:</h1>
-<%= render "items/form" %>
+<td>
+	<%= link_to "Generate Bill", bills_path, class: "btn btn-primary me-3" %>
+</td>

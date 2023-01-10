@@ -5,71 +5,71 @@
         <div class="col-15 col-md-8 col-lg-8 col-xl-5">
           <div class="card shadow-2-strong" style="border-radius: 1rem;">
             <div class="card-body p-5 text-center">
-	        	<h2 class="mb-4 pb-2 pb-md-0 mb-md-5">Booking Here</h2>
-						<%= simple_form_for @booking do |form| %>
-							
-							<div>
-								<%= form.hidden_field :user_id %>
-							</div>
+		        	<h2 class="mb-4 pb-2 pb-md-0 mb-md-5">Booking Here</h2>
+							<%= simple_form_for @booking do |form| %>
+								
+								<div>
+									<%= form.hidden_field :user_id %>
+								</div>
 
-							<div class="form-outline mb-4">
-								<%= form.label :pickup_address %><br>
-								<%= form.text_field :pickup_address, class: "form-control" %>
-							</div><br>
+								<div class="form-outline mb-4">
+									<%= form.label :pickup_address %><br>
+									<%= form.text_field :pickup_address, class: "form-control" %>
+								</div><br>
 
-							<div class="form-outline mb-4">
-								<%= form.label :pickup_city %><br>
-								<%= form.text_field :pickup_city, class: "form-control" %>
-							</div><br>
+								<div class="form-outline mb-4">
+									<%= form.label :pickup_city %><br>
+									<%= form.text_field :pickup_city, class: "form-control" %>
+								</div><br>
 
-							<div class="form-outline mb-4">
-								<%= form.label :pickup_state %><br>
-								<%= form.text_field :pickup_state, class: "form-control"%>
-							</div><br>
+								<div class="form-outline mb-4">
+									<%= form.label :pickup_state %><br>
+									<%= form.text_field :pickup_state, class: "form-control"%>
+								</div><br>
 
-							<div class="form-outline mb-4">
-								<%= form.label :pickup_date %><br>
-								<%= form.date_field :pickup_date, class: "form-control"%>
-							</div><br>
+								<div class="form-outline mb-4">
+									<%= form.label :pickup_date %><br>
+									<%= form.date_field :pickup_date, class: "form-control"%>
+								</div><br>
 
-							<div class="form-outline mb-4">
-						    <%= form.label :pickup_timing %><br>
-						    <%= form.select :pickup_timing, ['Select Timing', '07AM-09AM', '11AM-01PM', '03PM-05PM', '07PM-09PM'], class: "form-control" %><br />
-						  </div><br>
+								<div class="form-outline mb-4">
+							    <%= form.label :pickup_timing %><br>
+							    <%= form.select :pickup_timing, ['Select Timing', '07AM-09AM', '11AM-01PM', '03PM-05PM', '07PM-09PM'], class: "form-control" %><br />
+							  </div><br>
 
-							<div class="form-outline mb-4">
-								<%= form.label :delivery_address %><br>
-								<%= form.text_field :deliver_address, class: "form-control"%>
-							</div><br>
+								<div class="form-outline mb-4">
+									<%= form.label :delivery_address %><br>
+									<%= form.text_field :deliver_address, class: "form-control"%>
+								</div><br>
 
-							<div class="form-outline mb-4">
-								<%= form.label :delivery_city %><br>
-								<%= form.text_field :deliver_city, class: "form-control"%>
-							</div><br>
+								<div class="form-outline mb-4">
+									<%= form.label :delivery_city %><br>
+									<%= form.text_field :deliver_city, class: "form-control"%>
+								</div><br>
 
-							<div class="form-outline mb-4">
-								<%= form.label :delivery_state %><br>
-								<%= form.text_field :deliver_state, class: "form-control"%>
-							</div><br>
-							
-							<div id='items'>
-						    <%= form.simple_fields_for :items do |item| %>
-						      <%= render 'item_fields', f: item %>						      
-						    <% end %>
-						    <div class="links">
-						      <p class="btn btn-warning"><%= link_to_add_association 'Add Item', form, :items %></p>
-						    </div>
-						  </div>
+								<div class="form-outline mb-4">
+									<%= form.label :delivery_state %><br>
+									<%= form.text_field :deliver_state, class: "form-control"%>
+								</div><br>
+								
+								<div id='items'>
+							    <%= form.simple_fields_for :items do |item| %>
+							      <%= render 'item_fields', f: item %>						      
+							    <% end %>
+							    <div class="links">
+							      <p class="btn btn-warning"><%= link_to_add_association 'Add Item', form, :items %></p>
+							    </div>
+							  </div>
 
-						  <div class="btn btn-outline mt-md-4">
-								<%= form.submit class:"btn btn-dark me-3" %>
-							</div>
-						<% end %>
+							  <div class="btn btn-outline mt-md-4">
+									<%= form.submit class:"btn btn-dark me-3" %>
+								</div>
+							<% end %>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-	</div>
-</section>
+	</section>
 </center>
 					

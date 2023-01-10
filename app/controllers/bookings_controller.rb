@@ -1,6 +1,7 @@
 class BookingsController < ApplicationController
 	def index
 		@bookings = current_user.bookings.all.page(params[:page])
+    @manager_booking = Booking.all.page(params[:page])
 	end
   # Show our bookings
 	def show

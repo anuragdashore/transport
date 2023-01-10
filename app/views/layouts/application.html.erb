@@ -24,19 +24,17 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="<%= root_path %>">Home</a>
+              <%= link_to "Home", root_path, class:"nav-link" %>
+              <!-- <a class="nav-link active" aria-current="page" href="<%= root_path %>">Home</a> -->
             </li>
             <li class="nav-item">
-              <%#= link_to "What we do", about_us_path, class:"nav-link" %>
-              <a class="nav-link", href="#">What we do</a>
+              <%= link_to "What we do", about_us_path, class:"nav-link" %>
             </li>
             <li class="nav-item">
-              <%#= link_to "Services", service_path, class:"nav-link" %>
-              <a class="nav-link", href="#">Services</a>
-
+              <%= link_to "Services", service_path, class:"nav-link" %>
             </li>
             <li class="nav-item"> 
-              <%#= link_to "Contact us", contact_us_path, class:"nav-link" %>              <a class="nav-link", href="#">Contact us</a>
+              <%= link_to "Contact us", contact_us_path, class:"nav-link" %>  
             </li>
           </ul>
           <div>

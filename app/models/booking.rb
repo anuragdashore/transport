@@ -1,6 +1,7 @@
 class Booking < ApplicationRecord
   belongs_to :user
   has_many :items
+  has_one :bill
   accepts_nested_attributes_for :items, allow_destroy: true
   paginates_per 3
 

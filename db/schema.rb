@@ -10,9 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_12_28_103540) do
+ActiveRecord::Schema[7.0].define(version: 2023_01_05_092710) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "bills", force: :cascade do |t|
+    t.string "distance"
+    t.string "total_weight"
+    t.integer "total_item"
+    t.integer "total_ammount"
+    t.bigint "booking_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["booking_id"], name: "index_bills_on_booking_id"
+  end
 
   create_table "bookings", force: :cascade do |t|
     t.string "pickup_address"
@@ -75,6 +86,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_28_103540) do
     t.index ["user_id"], name: "index_users_roles_on_user_id"
   end
 
+  add_foreign_key "bills", "bookings"
   add_foreign_key "bookings", "users"
   add_foreign_key "items", "bookings"
 end

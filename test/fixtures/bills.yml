@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  distance: MyString
+  total_weight: MyString
+  total_item: 1
+  total_ammount: 1
+  booking: one
+
+two:
+  distance: MyString
+  total_weight: MyString
+  total_item: 1
+  total_ammount: 1
+  booking: two

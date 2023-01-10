@@ -97,3 +97,5 @@ gem 'cancancan'
 gem "cocoon"
 
 gem 'simple_form'
+
+gem 'geo-distance'
