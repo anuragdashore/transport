@@ -9,6 +9,9 @@
 		<th>Age</th>
 		<th>Gender</th>
 		<th>Role</th>
+		<th>Bookings</th>
+		<th>Edit</th>
+		<th>Delete</th>
 	</thead>
 	<tbody>
 		<tr>
@@ -33,13 +36,15 @@
 			<td>
 				<%= @user.role_id %><br>
 			</td>
+			<td>
+       	<%= link_to "Show", bookings_path(user_id: current_user.id), class: "btn btn-primary me-3" %>
+      </td>
+			<td>
+				<%= link_to "Edit", edit_user_path, class: "btn btn-primary" %><br>
+			</td>
+			<td>
+				<%= link_to "Destroy", users_path(@user), data: {turbo_method: :delete, turbo_confirm: :"Are You Sure?"}, class: "btn btn-primary" %>
+			</td>
 		</tr>
 	</tbody>
 </table><br>
-<!-- <ul>
-	<%= link_to "New Booking", new_booking_path(user_id: @user.id) %><br>
-	<%= link_to "Your Bookings", bookings_path %><br>
-	<%= link_to "Back", root_path %><br>
-	<%= link_to "Edit", edit_user_path(@user) %><br>
-	<%= link_to "Destroy", user_path(@user), data: {turbo_method: :delete, turbo_confirm: :"Are You Sure?"} %><br>
-</ul> -->

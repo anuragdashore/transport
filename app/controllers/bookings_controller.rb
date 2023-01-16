@@ -5,11 +5,11 @@ class BookingsController < ApplicationController
 	end
   # Show our bookings
 	def show
-		@booking = current_user.bookings.find(params[:id])		
+		@booking = Booking.find(params[:id])		
 	end
 
   def change_status
-    @booking = current_user.bookings.find(params[:id])
+    @booking = Booking.find(params[:id])
     if params[:status].present? && Booking::STATUSES.include?(params[:status])
       @booking.update(status: params[:status])
       redirect_to @booking, notice: "Status updated to #{@booking.status}"
@@ -38,7 +38,7 @@ class BookingsController < ApplicationController
 
   # Edit bookings
   def edit
-    @booking = current_user.bookings.find(params[:id])    
+    @booking = Booking.find(params[:id])    
   end
 
   # Edit and save bookings
@@ -54,7 +54,7 @@ class BookingsController < ApplicationController
 
   # Delete User
   def destroy
-    @booking = current_user.bookings.find(params[:id])
+    @booking = Booking.find(params[:id])
     @booking.destroy
 
     redirect_to bookings_path, status: :see_other

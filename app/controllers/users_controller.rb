@@ -1,7 +1,9 @@
 class UsersController < ApplicationController
   load_and_authorize_resource, except = [:index, :new ]
   def index
-    @users = User.all
+    @q = User.ransack(params[:q])
+    @users = @q.result(distinct: true).page(params[:page])
+    # @users = User.all
   end
 
   # Show User

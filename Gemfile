@@ -96,6 +96,8 @@ gem 'cancancan'
 # Use cocoon for handle nested forms
 gem "cocoon"
 
+# Use for letter opener
 gem 'simple_form'
 
-gem 'geo-distance'
+# Use ransack gem for search bar
+gem 'ransack'

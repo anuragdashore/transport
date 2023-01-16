@@ -6,6 +6,8 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 	has_many :bookings
+	accepts_nested_attributes_for :bookings, allow_destroy: true
+
 
 	validates :name, presence: true
 	validates :contact, presence: true

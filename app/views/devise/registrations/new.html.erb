@@ -40,7 +40,7 @@
               <div class="form-outline mb-4">
                 <%= f.label :role_id, class: "form-label" %><br />
                 <%#= f.text_field :role, autofocus: true, autocomplete: "Role", class: "form-control" %>
-                <%= f.select(:role_id, Role.where.not(id:1).pluck(:name, :id),{include_black: true},{class: "form-select"})%> 
+                <%= f.select(:role_id, Role.where(id:3).pluck(:name, :id),{include_black: true},{class: "form-select"})%> 
               </div>
 
               <div class="form-outline mb-4">
