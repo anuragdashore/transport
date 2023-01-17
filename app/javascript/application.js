@@ -6,3 +6,4 @@ import "jquery"
 import "jquery_ujs"
 import "@nathanvda/cocoon"
 
+import * as bootstrap from "bootstrap"

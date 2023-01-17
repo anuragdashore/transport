@@ -101,3 +101,6 @@ gem 'simple_form'
 
 # Use ransack gem for search bar
 gem 'ransack'
+
+# Use cssbundling-rails gem for bootstrap
+gem 'cssbundling-rails'

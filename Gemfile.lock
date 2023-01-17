@@ -94,6 +94,8 @@ GEM
     cocoon (1.2.15)
     concurrent-ruby (1.1.10)
     crass (1.0.6)
+    cssbundling-rails (1.1.2)
+      railties (>= 6.0.0)
     date (3.3.1)
     debug (1.7.0)
       irb (>= 1.5.0)
@@ -278,6 +280,7 @@ DEPENDENCIES
   capybara
   city-state
   cocoon
+  cssbundling-rails
   debug
   devise
   importmap-rails
