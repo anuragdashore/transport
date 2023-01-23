@@ -6,9 +6,9 @@ Rails.application.routes.draw do
   get '/service', to: "homes#service"
   get '/contact_us', to: "homes#contact_us"
 
-  resources :bills
   resources :users
   resources :bookings do
+  resources :bills
     resources :items
       member do
         patch :change_status

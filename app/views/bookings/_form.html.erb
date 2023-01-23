@@ -17,40 +17,40 @@
 									<%= form.text_field :pickup_address, class: "form-control" %>
 								</div><br>
 
-								<div class="form-outline mb-4">
-									<%= form.label :pickup_city %><br>
-									<%= form.text_field :pickup_city, class: "form-control" %>
-								</div><br>
+								<div>
+									<%= form.label :pickup_city, class:"form-label" %><br>
+									<%= form.select :pickup_city, ['Select City', 'Indore', 'Khandwa', 'Khargoan', 'Pune', 'Nagpur', 'Bangalore', 'Channai'], {include_black: true}, {class:"form-control form-select"} %>
+								</div><br><br>
 
-								<div class="form-outline mb-4">
-									<%= form.label :pickup_state %><br>
-									<%= form.text_field :pickup_state, class: "form-control"%>
-								</div><br>
+								<div>
+									<%= form.label :pickup_state, class:"form-label" %><br>
+									<%= form.select :pickup_state, ['Select State', 'Madhya Pradesh', 'Maharashtra', 'Karnataka'], {include_black: true}, {class:"form-control form-select"} %>
+								</div><br><br>
 
 								<div class="form-outline mb-4">
 									<%= form.label :pickup_date %><br>
 									<%= form.date_field :pickup_date, class: "form-control"%>
 								</div><br>
 
-								<div class="form-outline mb-4">
-							    <%= form.label :pickup_timing %><br>
-							    <%= form.select :pickup_timing, ['Select Timing', '07AM-09AM', '11AM-01PM', '03PM-05PM', '07PM-09PM'], class: "form-control" %><br />
+								<div>
+							    <%= form.label :pickup_timing, class:"form-label" %><br>
+							    <%= form.select :pickup_timing, ['Select Timing', '07AM-09AM', '11AM-01PM', '03PM-05PM', '07PM-09PM'], {include_black: true} ,{class:"form-control form-select"} %><br />
 							  </div><br>
 
 								<div class="form-outline mb-4">
 									<%= form.label :delivery_address %><br>
 									<%= form.text_field :deliver_address, class: "form-control"%>
-								</div><br>
+								</div><br />
 
-								<div class="form-outline mb-4">
+								<div>
 									<%= form.label :delivery_city %><br>
-									<%= form.text_field :deliver_city, class: "form-control"%>
-								</div><br>
+									<%= form.select :deliver_city, ['Select City', 'Indore', 'Khandwa', 'Khargoan', 'Pune', 'Nagpur', 'Bangalore', 'Channai'], {include_black: true}, {class:"form-control form-select"} %>
+								</div><br><br>
 
-								<div class="form-outline mb-4">
-									<%= form.label :delivery_state %><br>
-									<%= form.text_field :deliver_state, class: "form-control"%>
-								</div><br>
+								<div>
+									<%= form.label :delivery_state, class:"form-label" %><br>
+									<%= form.select :deliver_state, ['Select State', 'Madhya Pradesh', 'Maharashtra', 'Karnataka'], {include_black: true}, {class:"form-control form-select"} %>
+								</div><br><br>
 								
 								<div id='items'>
 							    <%= form.simple_fields_for :items do |item| %>

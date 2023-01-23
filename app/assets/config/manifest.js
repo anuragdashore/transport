@@ -5,4 +5,5 @@
 //= link application.bootstrap.scss
 //= link custom.css
 //= link cocoon.js
+//= require cocoon
 

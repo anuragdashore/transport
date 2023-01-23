@@ -44,6 +44,10 @@
 <h1>Items</h1>
 <%= render 'items/item' %>
 
-<td>
-	<%= link_to "Generate Bill", bills_path, class: "btn btn-primary me-3" %>
-</td>
+<% if @booking.status eql? :Done %>
+	<td>
+		<%= link_to "Generate Bill", new_booking_bill_path(booking_id: @booking.id), class: "btn btn-primary me-3" %>
+	</td>
+<% else %>
+	<%= "Your status has been" %> <%= @booking.status %>
+<% end %>

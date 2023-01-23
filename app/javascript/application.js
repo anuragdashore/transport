@@ -2,8 +2,8 @@
 import "@hotwired/turbo-rails"
 import "controllers"
 import "bootstrap"
-import "jquery"
-import "jquery_ujs"
-import "@nathanvda/cocoon"
+// require= jquery
+// require= jquery_ujs
+// require= @nathanvda/cocoon
 
 import * as bootstrap from "bootstrap"

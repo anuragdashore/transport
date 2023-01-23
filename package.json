@@ -1,9 +1,6 @@
 {
   "name": "app",
   "private": "true",
-  "scripts": {
-    "build:css": "sass ./app/assets/stylesheets/application.bootstrap.scss:./app/assets/builds/application.css --no-source-map --load-path=node_modules"
-  },
   "dependencies": {
     "@nathanvda/cocoon": "^1.2.14",
     "@popperjs/core": "^2.11.6",
@@ -11,6 +8,9 @@
     "bootstrap-icons": "^1.10.3",
     "jquery": "^3.6.3",
     "sass": "^1.57.1"
+  },
+    "scripts": {
+    "build:css": "sass ./app/assets/stylesheets/application.bootstrap.scss:./app/assets/builds/application.css --no-source-map --load-path=node_modules"
   },
   "devDependencies": {
     "@types/jquery": "^3.5.16"
