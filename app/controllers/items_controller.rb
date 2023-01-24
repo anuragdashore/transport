@@ -1,12 +1,12 @@
 class ItemsController < ApplicationController
+
+  before_action :set_item, only: [:create, :destroy]
+
   def new
     @item = Item.new(params[:booking_id])
-    # @item = Item.new(item_params)
-
   end
 
   def create
-    @booking = Booking.find(params[:booking_id])
     @item = @booking.items.create(item_params)
     redirect_to booking_path(@booking)
   end
@@ -29,7 +29,6 @@ class ItemsController < ApplicationController
   # end
 
   def destroy
-    @booking = Booking.find(params[:booking_id])
   	@item = @booking.items.find(params[:id])
   	@item.destroy
 
@@ -37,7 +36,12 @@ class ItemsController < ApplicationController
   end
 
 	private
-		def item_params
-			params.require(:item).permit(:item_name, :item_weight, :item_size)
-		end
+
+  def set_item
+    @booking = Booking.find(params[:booking_id])
+  end
+
+	def item_params
+		params.require(:item).permit(:item_name, :item_weight, :item_size)
+	end
 end

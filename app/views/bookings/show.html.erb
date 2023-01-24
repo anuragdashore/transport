@@ -44,10 +44,12 @@
 <h1>Items</h1>
 <%= render 'items/item' %>
 
-<% if @booking.status eql? :Done %>
+<% if @booking.status == "pending"%>
+	<%= "Your status is" %> <%= @booking.status %>
+<% elsif @booking.status == "reject" %>
+	<%= "Your status is" %> <%= @booking.status %>
+<% else %>
 	<td>
 		<%= link_to "Generate Bill", new_booking_bill_path(booking_id: @booking.id), class: "btn btn-primary me-3" %>
 	</td>
-<% else %>
-	<%= "Your status has been" %> <%= @booking.status %>
 <% end %>

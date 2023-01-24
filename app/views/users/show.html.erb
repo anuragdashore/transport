@@ -37,7 +37,7 @@
 			</td>
 			<% if current_user.has_role? :manager %>
 				<td>
-       		<%= link_to "Show", booking_path(user_id: current_user.id), class: "btn btn-primary me-3" %>
+       		<%= link_to "Show", bookings_path(user_id: current_user.id), class: "btn btn-primary me-3" %>
       	</td>
 			<% else %>
 				<td>

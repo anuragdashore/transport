@@ -1,15 +1,17 @@
 class BookingsController < ApplicationController
+  
+  before_action :set_booking, only: [:show, :change_status, :edit, :destroy]
+
 	def index
 		@bookings = current_user.bookings.all.page(params[:page])
     @manager_booking = Booking.all.page(params[:page])
 	end
+
   # Show our bookings
 	def show
-		@booking = Booking.find(params[:id])		
 	end
 
   def change_status
-    @booking = Booking.find(params[:id])
     if params[:status].present? && Booking::STATUSES.include?(params[:status])
       @booking.update(status: params[:status])
       redirect_to @booking, notice: "Status updated to #{@booking.status}"
@@ -38,7 +40,6 @@ class BookingsController < ApplicationController
 
   # Edit bookings
   def edit
-    @booking = Booking.find(params[:id])    
   end
 
   # Edit and save bookings
@@ -54,14 +55,18 @@ class BookingsController < ApplicationController
 
   # Delete User
   def destroy
-    @booking = Booking.find(params[:id])
     @booking.destroy
 
     redirect_to bookings_path, status: :see_other
   end
 
 	private
-		def booking_params
-			params.require(:booking).permit(:user_id, :pickup_address, :pickup_city, :pickup_state, :pickup_date, :pickup_timing, :deliver_address, :deliver_city, :deliver_state, items_attributes: [:id, :item_name, :item_weight, :item_size, :_destroy])			
-		end
+
+  def set_booking
+    @booking = Booking.find(params[:id])
+  end
+
+	def booking_params
+		params.require(:booking).permit(:user_id, :pickup_address, :pickup_city, :pickup_state, :pickup_date, :pickup_timing, :deliver_address, :deliver_city, :deliver_state, items_attributes: [:id, :item_name, :item_weight, :item_size, :_destroy])			
+	end
 end

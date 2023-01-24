@@ -1,8 +1,8 @@
 <%= stylesheet_link_tag "custom", "data-turbo-track": "reload" %>
 <center>
 	<div class="col-md-12">   
- 		<div class="row">
- 		  <div class="receipt-main col-xs-10 col-sm-10 col-md-6 col-xs-offset-1 col-sm-offset-1 col-md-offset-3">
+ 		<div class="row justify-content-center">
+ 		  <div class="receipt-main col-xs-10 col-sm-10 col-md-6 col-xs-offset-1 col-sm-offset-1 col-md-offset-3 ">
         <div class="row">
     			<div class="receipt-header">
 						<div class="col-xs-6 col-sm-6 col-md-6 text-right">
@@ -24,7 +24,7 @@
 								<p><b>Mobile :</b> <%= current_user.contact %></p>
 								<p><b>Email :</b> <%= current_user.email %></p>
 							</div>
-						</div>
+						</div><br>
 						<div class="col-xs-4 col-sm-4 col-md-4">
 							<div class="receipt-left">
 								<h3>INVOICE</h3>
@@ -77,7 +77,7 @@
 					<div class="receipt-header receipt-header-mid receipt-footer">
 						<div class="col-xs-8 col-sm-8 col-md-8 text-left">
 							<div class="receipt-right">
-								<p><b>Date :</b> 15 Aug 2016</p>
+								<p><b>Date :</b> <%= Time.new() %></p>
 								<h5 style="color: rgb(140, 140, 140);">Thanks for Booking</h5>
 							</div>
 						</div>
