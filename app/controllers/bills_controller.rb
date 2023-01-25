@@ -1,6 +1,6 @@
 class BillsController < ApplicationController
 		
-		around_action :set_bill, only: [:new]
+	around_action :set_bill, only: [:new]
 
 	def index
 		@bills = Bill.all
