@@ -1,2 +1,108 @@
+<!-- ---------------------------------IMAGE----------------------------------- -->
 <img src="<%= asset_path("transport7.jpg")%>" width="100%", height="550vh"> 
 <%= stylesheet_link_tag "custom", "data-turbo-track": "reload" %>
+
+<!-- ----------------------------------CONTACT FORM-------------------------------- -->
+<section style="background-color: #21D192;">
+	<div class="container py-4 h-100">
+		<div>
+			<h2 class="text-center">GET IN TOUCH WITH US</h2>
+		</div>
+		<div class="row">
+	    <div class="col-md-6">
+	      <div class="form-outline mb-1">
+	        <label for="name"></label>
+	        <input class="form-control" placeholder="Enter Name">
+	      </div>
+	    </div>
+	    <div class="col-md-6">
+	      <div class="form-outline mb-1">
+	        <label for="name"></label>
+	        <input class="form-control" placeholder="Your Email">
+	      </div>
+	    </div>
+	    <div class="col-md-6">
+	      <div class="form-outline mb-1">
+	        <label for="name"></label>
+	        <input class="form-control" placeholder="Contact No">
+	      </div>
+	    </div>
+	    <div class="col-md-6">
+	      <div class="form-outline mb-1">
+	        <label for="name"></label>
+	        <input class="form-control" placeholder="Subject">
+	      </div>
+	    </div>
+	    <div class="col-md-10">
+        <div class="form-outline mb-1">
+          <label for="message"></label>
+          <textarea class="form-control md-textarea" placeholder="Message"></textarea>
+        </div>
+      </div>
+      <div class="col-md-2">
+        <div class="form-outline mt-5">
+      		<%= link_to "Submit", root_path, class:"btn btn-outline-danger" %>
+        </div>
+      </div>
+	   </div>
+	  </div>
+	  </div>
+	</div>
+</section>
+
+<!-- ---------------------------------ABOUT US------------------------------- -->
+<div class="container py-5">
+	<div class="row align-items-center">
+		<div class="col-md-6">
+		  <h3 class="text-uppercase fw-bold mt-5">ABOUT OUR COMPANY</h3>
+		  <hr class="mb-4 d-inline-block mx-auto" style="width: 330px; background-color: #7c4dff; height: 2px"/>
+		  <p>Welcome to Unicorn Packers and Movers  Indore! We are one of the topnotch Packers and Movers. bestowed with numerous esteemed awards for reaching the exceptional heights by serving the customers most proficiently. We have aptly amalgamated new-age technology and inventiveness with the values by respecting the sentiments of our customers associated with their possessions. With the highly skilled team serving you to the best of their abilities day in day out, we have been able to carve our forte in the Packing and Moving industry.</p>
+		</div>
+		<div class="col-md-6">
+			<div class="about_img">
+				<img src="<%= asset_path('transport3.jpg') %>" alt="about_img" width="100%"> 
+			</div>
+		</div>
+	</div>
+	<%= link_to "ABOUT US", about_us_path, class: "btn btn-outline-dark" %>
+</div>
+<hr />
+
+<!-- ---------------------------------SERVICES----------------------------- -->
+<div class="container py-4 h-100">
+	<div>
+		<h2 class="text-center">OUR SERVICES</h2>
+	</div>
+	<div class="row mt-5">
+		<div class="col-md-3">
+		  <div class="form-outline mb-4">
+		    <img src="<%= asset_path('A2.jpg') %>" width="100%" height="250pv">
+		    <h6 class="mt-3">Bike Shifting</h6>
+		    <p>Bike Transport anywhere in India. We have specialized car transporters to Move cars to/from anywhere in India.</p>
+		  </div>
+		</div>
+		<div class="col-md-3">
+		  <div class="form-outline mb-2">
+		    <img src="<%= asset_path('A1.jpg') %>" width="100%" height="250pv">
+		    <h6 class="mt-3">Car Shifting</h6>
+		    <p>Car Transport anywhere in India. We have specialized car transporters to Move cars to/from anywhere in India.</p>
+		  </div>
+		</div>
+		<div class="col-md-3">
+		  <div class="form-outline mb-2">
+		    <img src="<%= asset_path('A3.jpg') %>" width="100%" height="250pv">
+		    <h6 class="mt-3">Office Shifting</h6>
+		    <p>Unicorn Packers and Movers offer the top preparation and moving services to all locations</p>
+		  </div>
+		</div>
+		<div class="col-md-3">
+		  <div class="form-outline mb-2">
+		    <img src="<%= asset_path('A4.jpg') %>" width="100%" height="250pv">
+		    <h6 class="mt-3">Home Shifting</h6>
+		    <p>Unicorn Packers and Movers offer the top preparation and moving services to all locations</p>
+		  </div>
+		</div>
+	</div>
+</div>
+
+<!-- --------------------------------OUR GALLARY---------------------------- -->

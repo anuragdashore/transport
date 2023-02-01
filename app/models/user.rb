@@ -9,7 +9,6 @@ class User < ApplicationRecord
 	has_many :bills
 	accepts_nested_attributes_for :bookings, allow_destroy: true
 
-
 	validates :name, presence: true
 	validates :contact, presence: true
 	validates :gender, presence: true

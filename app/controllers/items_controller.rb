@@ -31,7 +31,6 @@ class ItemsController < ApplicationController
   def destroy
   	@item = @booking.items.find(params[:id])
   	@item.destroy
-
   	redirect_to booking_item_path, status: :see_other
   end
 
